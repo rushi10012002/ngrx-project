@@ -1,0 +1,25 @@
+ 
+
+ <div class="container">
+     <!-- {{count$ | async}} -->
+     <div class="row mt-2">
+         <div class="col-lg-6 offset-lg-3 px-auto">
+            <input class="form-control my-2 w-50" placeholder="Search Data By Id and Title" [ngModel]="inputData" (ngModelChange)="changeFn($event)">
+         </div>
+         <div class="col-lg-4"  *ngFor="let item of count1$ | async">
+            <div class="card my-2">
+                <div class="card-body">
+                    <strong>Card No.</strong> {{item.id}} <br>
+                   <strong>Title</strong> {{item.title}} <br>
+                   <strong>Body</strong> {{item.body}} <br>
+                   <!-- {{item.id}} <br> -->
+   
+                </div>
+            </div>
+         </div>
+        
+     </div>
+ </div>
+ 
+
+ 
